@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    min-height: 100vh;
+
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(0px, 800px) 1fr;
+}
+
+.container {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    h1 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 3rem;
+        color: #333;
+        text-align: center;
+    }
+    .img-area {
+        display: flex;
+        justify-content: center;
+        img {
+            display: block;
+            max-width: 600px;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+        }
+    }
+    h2 {
+        margin: 0px;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .select {
+        display: flex;
+        justify-content: center;
+        .btn {
+            height: 50px;
+            width: 100px;
+            border: 2px solid #333;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+
+            cursor: pointer;
+            transition: background 0.2s;
+
+            &:hover {
+                background: lightsalmon;
+            }
+
+            &:nth-child(2) {
+                margin: 0px 20px;
+            }
+        }
+    }
+    .result-area {
+        background: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            margin-bottom: 20px;
+            color: white;
+
+            &.yes {
+                color: green;
+            }
+
+            &.no {
+                color: red;
+            }
+        }
+        .info {
+            color: white;
+        }
+        .btn {
+            height: 50px;
+            width: 100px;
+            border: 2px solid white;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+
+            cursor: pointer;
+            transition: background 0.2s;
+
+            &:hover {
+                background: lightsalmon;
+            }
+
+            margin: 20px 0px;
+
+            .next {
+                color: white;
+            }
+        }
+    }
+}
